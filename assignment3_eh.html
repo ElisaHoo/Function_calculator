@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Calculator and Plotter</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+    <style>
+        label {
+            width: 200px;
+            display: inline-block;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Function Calculator</h1>
+
+    <form>
+        <label for="id_function">Function f(x) return value:</label>
+        <input type="text" name="function" id="id_function" size="30" autofocus value="sin(x)" >
+        <br>
+        <label for="id_startX">Start of x range:</label>
+        <input type="number" name="startX" id="id_startX" size="30">
+        <br>
+        <label for="id_endX">End of x range:</label>
+        <input type="number" name="endX" id="id_endX" size="30">
+        <br>
+        <label for="id_stepX">x step:</label>
+        <input type="number" name="stepX" id="id_stepX" size="30">
+        <br>
+        <input type="button" id="id_button" value="Calculate">
+        <br>
+        <div>
+            <canvas id="id_plotter" width="800" height="450"></canvas>
+        </div>
+        <hr>
+        <output id="id_result"></output>
+    </form>
+    <script src="script_ass3.js"></script>
+</body>
+</html>
